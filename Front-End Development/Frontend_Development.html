@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <link rel="stylesheet" href="Frontend_Development.css" />
+    <script type="text/javascript">
+        function adjustPageWidth() {
+            const width = window.innerWidth;
+
+            if (width >= 992 && width <= 1600) {
+                document.body.style.transform = "scale(0.9)";
+            } else if (width >= 700 && width <= 767) {
+                document.body.style.transform = "scale(0.8)";
+            } else if (width >= 600 && width < 700) {
+                document.body.style.transform = "scale(0.75)";
+            } else if (width <= 600) {
+                document.body.style.transform = "scale(0.5)";
+            } else {
+                document.body.style.transform = "scale(1)";
+            }
+        }
+        window.addEventListener("resize", adjustPageWidth);
+
+        function toggleMenu() {
+            const menuContent = document.getElementById("menuContent");
+            if (menuContent.style.display === "none") {
+                menuContent.style.display = "block";
+            } else {
+                menuContent.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="navbar">Fixed Navbar</div>
+    <div class="container">
+        <div class="left-menu" id="leftMenu">
+            <button onclick="toggleMenu()">Toggle Menu</button>
+            <div id="menuContent">
+                <p>Menu Item 1</p>
+                <p>Menu Item 2</p>
+                <p>Menu Item 3</p>
+            </div>
+        </div>
+        <div class="main-content">Main Content</div>
+        <div class="right-panel">Right Panel</div>
+    </div>
+    <div class="footer">Footer</div>
+</body>
+
+</html>

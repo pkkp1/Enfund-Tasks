@@ -1,0 +1,11 @@
+Question 1 : What is a VPC in AWS, and what is its purpose?
+Answer 1 : Amazon VPC or Amazon Virtual Private Cloud is a service that allows its users to launch their virtual machines in a protected
+           as well as isolated virtual environment defined by them. You have complete control over your VPC, from creation to 
+           customization and even deletion. It’s applicable to organizations where the data is scattered and needs to be managed well. 
+           In other words, VPC enables us to select the virtual address of our private cloud and we can also define all the 
+           sub-constituents of the VPC like subnet, subnet mask, availability zone, etc on our own. 
+
+Question 2 : What are EC2 and Gunicorn in the context of AWS? Why are they used together?
+Answer 2 : EC2(Elastic Complete Cloud) are virtual servers which are used to host applications.
+           Gunicorn is a Python Web Server Gateway Interface for running web applications.
+           They are used together to host and serve Python web applications efficiently on EC2.
