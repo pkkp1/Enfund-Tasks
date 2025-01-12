@@ -1,4 +1,4 @@
-The Django project will require following installations :
+The Django project 'WeChatApp' will require following installations :
 
 (1) Python
   - npm install python
@@ -11,5 +11,9 @@ The Django project will require following installations :
 
 (4) Daphne
   - pip install daphne
+
+(5) Vritual Envirement
+  - pip install virtualenv
+
 
 The application uses web sockets and Django channels to implement real-time chat.
