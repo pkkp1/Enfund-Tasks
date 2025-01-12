@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+<!-- <h2>Sign up</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Sign Up</button>
+</form> -->
+<div class="container">
+    <h5 class="alert alert-info">Sign Up</h5>
+    <div class="btn btn-light d-flex justify-content-between" style="padding: 34px 30%;">
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+            <button type="button" class="btn btn-light"><a href="{% url 'login' %}">Log In</a></button>
+        </form>
+    </div>
+</div>
+{% endblock %}
