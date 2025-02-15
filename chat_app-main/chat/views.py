@@ -80,6 +80,9 @@ def user_list(request):
     users = User.objects.all()
     return render(request, 'user_list.html', {'users': users})
 
+def frontend(request):
+    return render(request, 'Frontend_Development.html')
+
 @login_required
 def delete_all_users(request):
     if request.method == 'POST':
