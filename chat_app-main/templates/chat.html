@@ -113,10 +113,19 @@
   </style>
 
   <div class="container-fluid h-100">
+    <div class="row">
+      <button
+        style="border-color: white;background-color: #2C3E50;position: absolute;z-index: 100;top: 0.5em; left: 0.5em;"
+        class="btn btn-primary" type="button" data-toggle="collapse" data-target="#sidebar" aria-expanded="false"
+        aria-controls="sidebar">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
     <div class="row h-100">
       <!-- User List Sidebar (4 Columns) -->
-      <div class="col-3 sidebar p-3 chats">
-        <h5 class="mb-3 text-white">Chats</h5>
+
+      <div class="col-3 sidebar p-3 chats" id="sidebar">
+        <h5 class="mb-3 text-white text-center">Chats</h5>
         <div class="contacts">
           {% for item in user_last_messages %}
           <a href="{% url 'chat' item.user.username %}"
@@ -326,6 +335,8 @@
       }
     };
   </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
